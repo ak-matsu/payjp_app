@@ -12,6 +12,8 @@ class CardsController < ApplicationController
       customer_token: customer.id, # 顧客トークン
       user_id: current_user.id # ログインしているユーザー
     )
+    card.save
+    redirect_to root_path
   end
 
 end
